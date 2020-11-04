@@ -13,9 +13,8 @@ body{
 header{
   background: #E4DDFF;
   border-bottom: 3px solid #433289;
-  /*Your  code here again.*/
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -24,43 +23,130 @@ header img{
   width: 750px;
 }
 
-nav li{
-  background-color: #FFFFAA;
-  display:inline;
-  /* padding: 5px 20px; */
-
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  padding: 5px 20px;
 }
 
-nav a{
+.nav_item a{
+  background-color: #FFFFAA;
   color: #433289;
   font-weight: bold;
   font-size: 25px;
   text-decoration: none;
-  padding: 20px;
+  padding: 5px 10px;
   text-transform:uppercase
 }
 
-.active {
-	background-color: #433289;
-	color: #FFFFAA;
-	padding:10px 10px;
-	font-size: 30px;
-}
-
-nav a:hover{
+.nav_item a:hover, a:focus{
 	text-decoration: underline;
 	background-color: #433289;
 	color: #FFFFAA;
-	padding:10px 10px;
-	font-size: 30px;
+	/* padding: 5px 10px; */
+	/* font-size: 30px; */
 }
+
+.nav_item .active {
+	background-color: #433289;
+	color: #FFFFAA;
+	/* padding:5px 10px; */
+	/* font-size: 30px; */
+}
+
 
 footer{
   background-color: black;
   color: white;
-  padding-top: 20px;
+  padding-top: 5px;
   text-align: center;
   width:100%;
   position: fixed;
   bottom: 0;
+}
+
+form {
+  margin: 10px 100px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+legend{ 
+  font-size: 125%;
+  font-weight:bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label{
+  display: inline-block;
+  margin-right:10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea{
+  width: 100%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=radio]{
+    display:inline;
+    width:inherit;
+	margin-left: 50px;
+}
+
+input[type=submit] {
+  background-color: #433289;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  header{
+	flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_links{
+	flex-direction: row;
+	justify-content: space-between;	
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+  
+  form {
+	width: 650px;
+	margin: 0 auto;
+  }
+  
+  input[type=radio]{
+	margin-left: 100px;
+  }
 }
