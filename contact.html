@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="images/icon.png"/>
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
     <title>Home</title>
   </head>
   
@@ -13,22 +13,53 @@
 	<header>
 	<img src="images/logo.png" alt="logo" id = "logo">
 	<nav>
-	  <ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="video.html"> My Videos</a></li>
-		<li><a href="video.html">noname</a></li>
-		<li><a href="contact.html" class="active">Contact me</a></li>
+	  <ul class="nav_links">
+		<li class="nav_item"><a href="index.html">Home</a></li>
+		<li class="nav_item">&emsp;</li>
+		<li class="nav_item"><a href="video.html"> My Videos</a></li>
+		<li class="nav_item">&emsp;</li>
+		<li class="nav_item"><a href="noname.html">noname</a></li>
+		<li class="nav_item">&emsp;</li>
+		<li class="nav_item"><a href="contact.html"  class="active">Contact Me</a></li>
 	  </ul>
 	</nav>	
 	</header>
 
 	<main>
-	
+	<div class="message-wrap">
+	<!-- <h2>Give me some feedback!</h2> -->
+	<form action="https://formspree.io/f/xqkgbgne" method="POST">
+	  <fieldset>
+		<legend>Give me some feedback!</legend>
+		
+		<label>Your Sex</label><br>
+		<input type="radio" name="sex" value="male" id = "cBox1">
+		<label for ="cBox1">Male</label>
+		<input type="radio" name="sex" value="female" id = "cBox2">
+		<label for ="cBox2">Female</label>
+		<input type="radio" name="sex" value="secret" id = "cBox3">
+		<label for ="cBox3">Secret</label><br>
+		
+		<label for="name_id">Your Name</label>
+		<input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+
+		<label for="email_id">Your Email</label>
+		<input type="email" placeholder="example@email.com" id = "email_id" name="email" required>
+
+		<label for="phone_id">Your Phone Number</label>
+		<input type="tel" name="phone" placeholder="Format: 123-456-7890" id = "phone_id" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+		<label for="msg">Your comments</label>
+		<textarea placeholder="Enter your comments" id = "msg" name="mesg" required></textarea><br>
+		
+		<input type="submit" value = "Contact Me">
+	  </fieldset>
+	 </form>
+	 </div>
 	</main>
 
 	<footer>
-	<p>University of Michigan School of Information <br/>
-        &copy; Minjia Qian 2020</p>
+	<p>&copy; Minjia Qian 2020</p>
 	</footer>
 
   </body>
