@@ -110,7 +110,22 @@ div{
 }
 
 
-@media screen and (min-width: 800px){
+
+@media screen and (min-width: 760px) {
+  header{
+	flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav_links{
+	flex-direction: row;
+	justify-content: space-between;	
+  }
+
+}
+  
+
+@media screen and (min-width: 1470px) {
   header{
 	flex-direction: row;
     justify-content: space-between;
@@ -124,4 +139,5 @@ div{
   .nav_item a{
     padding: 10px;
   }
+	
 }
