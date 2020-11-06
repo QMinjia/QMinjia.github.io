@@ -23,6 +23,25 @@ header img{
   width: 750px;
 }
 
+@-webkit-keyframes logo_wiggle{
+	0%      {-webkit-transform: rotateY(0deg);left:0px;}
+	50%     {-webkit-transform: rotateY(360deg);left:0;}
+	100%    {-webkit-transform: rotateY(-360deg);left:0px;}
+}
+
+@keyframes logo_wiggle{
+	0%      {-webkit-transform: rotateY(0deg);left:0px;}
+	50%     {-webkit-transform: rotateY(360deg);left:0;}
+	100%    {-webkit-transform: rotateY(-360deg);left:0px;}
+} 
+
+#logo{
+  -webkit-animation-duration: 5s;
+  -webkit-animation-name: logo_wiggle;
+  animation-duration: 5s;
+  animation-name: logo_wiggle;
+}
+
 .nav_links{
   display: flex;
   flex-direction: column;
@@ -184,8 +203,11 @@ div:hover .card-title{
 .card6 {
 	grid-column: 3 / span 1;
 	grid-row: 2 / span 1;
+}	
 }
 
-
-	
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
 }
