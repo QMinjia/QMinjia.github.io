@@ -50,13 +50,16 @@ header img{
 	/* font-size: 30px; */
 }
 
-.nav_item .active {
+.nav_item .chosen {
 	background-color: #433289;
 	color: #FFFFAA;
 	/* padding:5px 10px; */
 	/* font-size: 30px; */
 }
 
+.nav_item:active {
+  transform: translateY(5px);
+}
 
 footer{
   background-color: black;
