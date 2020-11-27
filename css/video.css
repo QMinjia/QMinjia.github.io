@@ -126,6 +126,11 @@ footer{
 	opacity: 0.6;
 }
 
+.card-img {
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
 div {
 	position: relative;
 	width: 100%;
