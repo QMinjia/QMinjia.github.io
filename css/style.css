@@ -185,9 +185,9 @@ div{
   transform: rotateY(180deg);
 }
 
-/* .flipcard:focus .card { */
-  /* transform: rotateY(180deg); */
-/* } */
+.flipcard:focus .card {
+  transform: rotateY(180deg);
+}
 
 .front, .back {
   position: absolute;
