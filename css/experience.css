@@ -182,6 +182,8 @@ footer{
 .text-block h2{
   font-weight: bold;
   font-size: 30px;
+  font-family: "Comic Sans MS";
+  text-decoration: underline;
 }
 
 
