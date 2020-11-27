@@ -151,11 +151,68 @@ div{
 	background-color: #FFDDE4;
 }
 
+#photo{
+	text-align: center;
+	background-color: #DDEBFF;
+}
+
 #continue{
 	text-align: center;
 }
 
+.flipcard {
+  background-color: transparent;
+  width: 600px;
+  height: 500px;
+  perspective: 1000px;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
 
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flipcard:hover .card {
+  transform: rotateY(180deg);
+}
+
+/* .flipcard:focus .card { */
+  /* transform: rotateY(180deg); */
+/* } */
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #292970;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  text-decoration: underline;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
 
 @media screen and (min-width: 760px) {
   header{
