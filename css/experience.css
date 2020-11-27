@@ -90,6 +90,10 @@ footer{
   bottom: 0;
 }
 
+h1{
+	display: none;
+}
+
 .container{
     display: grid;    
 	-webkit-grid-template-columns: 1fr 5fr 1fr;
